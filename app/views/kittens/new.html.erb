@@ -1,0 +1,10 @@
+<% provide(:button_text, 'Create a new kitten') %>
+<% provide(:path, kittens_path) %>
+
+<h1>Create a new kitten</h1>
+<div>
+  <%= render 'form' %>
+</div>
+
+<br>
+<%= link_to "Back to index", kittens_path %>

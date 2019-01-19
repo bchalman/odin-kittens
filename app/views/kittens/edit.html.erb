@@ -1,0 +1,12 @@
+<% provide(:button_text, 'Save changes') %>
+<% provide(:path, kitten_path) %>
+
+<h1>Edit a kitten</h1>
+<div>
+ <%= render 'form' %>
+</div>
+
+<br>
+<%= link_to "Delete kitten", @kitten, method: :delete,
+                              data: { confirm: "You sure?" } %><br>
+<%= link_to "Back to index", kittens_path %>

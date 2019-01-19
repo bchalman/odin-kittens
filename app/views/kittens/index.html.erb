@@ -1,0 +1,25 @@
+<h1>Look at all the kittens!</h1>
+
+<div>
+  <table style="width:60%;margin-left:15px">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Cuteness</th>
+      <th>Softness</th>
+    </tr>
+    <% @kittens.each do |kitten| %>
+    <tr style="text-align:center">
+      <td><%= link_to  kitten.name, kitten %></td>
+      <td><%= kitten.age %></td>
+      <td><%= kitten.cuteness %></td>
+      <td><%= kitten.softness %></td>
+      <td><%= link_to "delete", kitten, method: :delete,
+                                    data: { confirm: "You sure?" } %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+
+<br>
+<%= link_to "Add a new kitten here", new_kitten_path %>
